@@ -702,17 +702,8 @@ function App() {
         </div>
         <div className="column">
           <table style={{width:'100%'}}>
-            <tr><th>Dívida</th><th>Renda</th><th>Garantia</th><th>História de Credito</th></tr>
+            <tr><th>Renda</th><th>História de Credito</th><th>Dívida</th><th>Garantia</th></tr>
             <tr>
-              <td>
-              <select value={divida} onChange={(option ) => {setDivida(option.target.value)}}>
-                <option value={""}></option>
-                {optionsDivida.map((option) => (
-                  <option value={option}>{option.toUpperCase()}</option>
-                ))}
-              </select>
-              
-              </td>
               <td>
               <select value={renda} onChange={(option ) => {setRenda(option.target.value)}}>
                 <option value={""}></option>
@@ -723,18 +714,28 @@ function App() {
               
               </td>
               <td>
-              <select value={garantia} onChange={(option ) => {setGarantia(option.target.value)}}>
+              <select value={credito} onChange={(option ) => {setCredito(option.target.value)}}>
                 <option value={""}></option>
-                {optionsGarantia.map((option) => (
+                {optionsCredito.map((option) => (
                   <option value={option}>{option.toUpperCase()}</option>
                 ))}
               </select>
               
               </td>
               <td>
-              <select value={credito} onChange={(option ) => {setCredito(option.target.value)}}>
+              <select value={divida} onChange={(option ) => {setDivida(option.target.value)}}>
                 <option value={""}></option>
-                {optionsCredito.map((option) => (
+                {optionsDivida.map((option) => (
+                  <option value={option}>{option.toUpperCase()}</option>
+                ))}
+              </select>
+              
+              
+              </td>
+              <td>
+              <select value={garantia} onChange={(option ) => {setGarantia(option.target.value)}}>
+                <option value={""}></option>
+                {optionsGarantia.map((option) => (
                   <option value={option}>{option.toUpperCase()}</option>
                 ))}
               </select>
